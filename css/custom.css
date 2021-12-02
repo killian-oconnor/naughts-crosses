@@ -1,0 +1,15 @@
+.col {
+    width: 150px;
+    border: solid black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    background-color: rgb(143, 195, 255);
+    color: white;
+
+}
+
+.row {
+    height: 150px;
+}
