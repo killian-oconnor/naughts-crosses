@@ -45,17 +45,27 @@ Array.from(columns).forEach(element => {
     element.addEventListener("click", clickOO);
 });
 
+let playerSymbol = "X";
+
 function clickOO() {
     console.log("Running clickOO");
     console.log(this.textContent);
-    
 
-    if (this.textContent.includes("X")) {
-        this.textContent = "O";
+    if (!this.textContent.includes("X") && !this.textContent.includes("O") && playerSymbol == "X") {
+        this.textContent = playerSymbol;
+        playerSymbol = "O";
     }
-    else if (this.textContent.includes("O")) {
-        this.textContent = "X";
+    else if (!this.textContent.includes("X") && !this.textContent.includes("O") && playerSymbol == "O") {
+        this.textContent = playerSymbol;
+        playerSymbol = "X";
     }
+
+    // if (this.textContent.includes("X")) {
+    //     this.textContent = playerSymbol;
+    // }
+    // else if (this.textContent.includes("O")) {
+    //     this.textContent = playerSymbol;
+    // }
     
 }
 
